@@ -1,0 +1,17 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+ul li, ol li {
+    padding-left: 0.3em;
+}
+
+.site {
+    /* background-color: aquamarine; */
+}
+
+.wrapper {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1em 2em;
+}

@@ -1,0 +1,13 @@
+.entry-content {
+    background: url('../images/notary-sign.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.entry-content p {
+    text-shadow: 2px 2px 7px rgba(0,0,0,0.9);
+    font-size: 4em;
+    text-align: center;
+    color: #FFF;
+    padding: 1.4em 0.3em;
+    font-style: italic;
+}
