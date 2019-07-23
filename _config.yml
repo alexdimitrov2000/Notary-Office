@@ -16,6 +16,7 @@
 title: Нотариална Кантора - Брезник
 email: alex_dimitrov2000@abv.bg
 description: Notary office Breznik city
+destination: docs
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -37,3 +38,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - docs
