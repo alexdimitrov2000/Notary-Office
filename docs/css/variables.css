@@ -1,0 +1,17 @@
+:root {
+    --font-size-default: 12px;
+    --font-size-large: 14px;
+    --font-size-larger: 16px;
+    --font-size-largest: 18px;
+
+    --font-family-default: 'Fira Sans';
+    --font-family-headings: 'Merriweather';
+
+    --color-body-text-default: #000;
+    --color-body-bgrd-default: rgb(230, 230, 230);
+
+    --color-nav-link-bgrd: rgb(173, 216, 230);
+    --color-nav-link-bgrd-hover: rgb(78, 211, 255);
+
+    --border-radius-nav-links: 0.4em;
+}
