@@ -10,6 +10,8 @@
     --color-body-text-default: #000;
     --color-body-bgrd-default: rgb(230, 230, 230);
 
+    --color-border-default: rgb(173, 216, 230);
+
     --color-nav-link-bgrd: rgb(173, 216, 230);
     --color-nav-link-bgrd-hover: rgb(78, 211, 255);
 

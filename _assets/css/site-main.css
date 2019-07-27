@@ -25,16 +25,19 @@
 
 .useful-links .link {
     margin: 1em 0;
-    max-width: 100%;
     text-align: center;
 }
 
-.useful-links .link img {
-    max-width: 90%;
-    height: auto;
-    transition: max-width 0.2s ease-in-out;
+.useful-links .link::after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 3px;
+    margin: 0 auto;
+    background-color: var(--color-border-default);
+    transition: width 0.3s ease-in;
 }
 
-.useful-links .link a:hover img {
-    max-width: 100%;
+.useful-links .link:hover::after {
+    width: 55%;
 }
