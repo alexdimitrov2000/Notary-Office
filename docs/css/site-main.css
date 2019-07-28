@@ -24,21 +24,21 @@
 }
 
 .useful-links .link {
-    margin: 1em 0;
+    margin: 1.3em 0;
     text-align: center;
 }
 
-.useful-links .link::after {
+.useful-links .link a::after {
     display: block;
     content: '';
     width: 0;
-    height: 3px;
+    height: 0.2em;
     margin: 0 auto;
     background-color: var(--color-border-default);
     transition: width 0.3s ease-in;
 }
 
-.useful-links .link:hover::after {
+.useful-links .link a:hover::after {
     width: 55%;
 }
 
