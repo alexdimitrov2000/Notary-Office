@@ -10,7 +10,7 @@
     <title>{{ site.title }}</title>
 </head>
 
-<body>
+<body{% if page.pageName %} class="page-{{page.pageName}}"{% endif %}>
     <div class="site">
         <header class="site-header">
             <div class="wrapper">
