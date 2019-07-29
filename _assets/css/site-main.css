@@ -14,6 +14,30 @@
     letter-spacing: 2px;
 }
 
+.site-main .wrapper > h2 {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.site-main .wrapper > h2::before,
+.site-main .wrapper > h2::after {
+    display: block;
+    content: '';
+    flex-grow: 1;
+    height: 2px;
+    background-color: var(--color-body-text-default);
+    opacity: 0.5;
+}
+
+.site-main .wrapper > h2::before {
+    margin-right: 1em;
+}
+
+.site-main .wrapper > h2::after {
+    margin-left: 1em;
+}
+
 .office-info {
     padding: 1em 0;
 }
