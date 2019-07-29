@@ -8,6 +8,6 @@
 
 @import url('site-header.css');
 @import url('site-main.css');
-/* @import url('site-footer.css'); */
+@import url('site-footer.css');
 
 @import url('navigation.css');

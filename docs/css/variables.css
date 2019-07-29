@@ -15,5 +15,8 @@
     --color-nav-link-bgrd: rgb(173, 216, 230);
     --color-nav-link-bgrd-hover: rgb(78, 211, 255);
 
+    --color-footer-bgrd-default: #565656;
+    --color-footer-headers: rgb(78, 211, 255);
+
     --border-radius-nav-links: 0.4em;
 }
