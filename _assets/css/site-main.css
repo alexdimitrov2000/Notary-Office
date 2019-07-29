@@ -63,7 +63,6 @@
     height: 0.2em;
     margin: 0 auto;
     background-color: var(--color-border-default);
-    transition: width 0.3s ease-in;
 }
 
 .useful-links .link a:hover::after {
