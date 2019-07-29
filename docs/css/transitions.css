@@ -6,37 +6,37 @@
     transition: width 0.3s ease-in;
 }
 
-.site-header .site-branding,
-.site-footer {
+.page-home .site-header .site-branding,
+.page-home .site-footer {
     opacity: 0;
     transform: translateX(-5em);
 
     transition: opacity 0.4s ease-in, transform 0.4s ease-in;
 }
 
-body.loaded .site-header .site-branding,
-body.loaded .site-footer {
+body.page-home.loaded .site-header .site-branding,
+body.page-home.loaded .site-footer {
     opacity: 1;
     transform: translateX(0);
 }
 
-.site-header .site-nav li {
+.page-home .site-header .site-nav li {
     opacity: 0;
     transform: translateY(-3em);
 
     transition: opacity 0.4s ease-in, transform 0.4s ease-in;
 }
 
-.site-header .site-nav li:nth-child(1) { transition-delay: 0.4s; }
-.site-header .site-nav li:nth-child(2) { transition-delay: 0.5s; }
-.site-header .site-nav li:nth-child(3) { transition-delay: 0.6s; }
+.page-home .site-header .site-nav li:nth-child(1) { transition-delay: 0.4s; }
+.page-home .site-header .site-nav li:nth-child(2) { transition-delay: 0.5s; }
+.page-home .site-header .site-nav li:nth-child(3) { transition-delay: 0.6s; }
 
-body.loaded .site-header .site-nav li {
+body.page-home.loaded .site-header .site-nav li {
     opacity: 1;
     transform: translateY(0);
 }
 
-.site-main {
+.page-home .site-main {
     opacity: 0;
     transform: translateY(10em);
 
@@ -44,12 +44,12 @@ body.loaded .site-header .site-nav li {
     transition-delay: 0.9s;
 }
 
-body.loaded .site-main {
+body.page-home.loaded .site-main {
     opacity: 1;
     transform: translateY(0);
 }
 
-.site-main .entry-content p {
+.page-home .site-main .entry-content p {
     opacity: 0;
     transform: translateY(-9em);
 
@@ -57,7 +57,7 @@ body.loaded .site-main {
     transition-delay: 0.9s;
 }
 
-body.loaded .entry-content p {
+body.page-home.loaded .entry-content p {
     opacity: 1;
     transform: translateY(0);
 }
