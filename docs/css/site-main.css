@@ -28,6 +28,10 @@
     text-align: center;
 }
 
+.useful-links .link a {
+    display: block;
+}
+
 .useful-links .link a::after {
     display: block;
     content: '';
