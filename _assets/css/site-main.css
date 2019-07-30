@@ -47,7 +47,12 @@
     background-color: #FFF;
 }
 
-.useful-links .link {
+.useful-links ul.links {
+    padding: 0;
+}
+
+.useful-links li.link {
+    list-style: none outside;
     margin: 1.3em 0;
     text-align: center;
 }
