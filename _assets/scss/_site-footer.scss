@@ -1,0 +1,38 @@
+.site-footer {
+    background-color: var(--color-footer-bgrd-default);
+    color: #FFF;
+    
+    section {
+        border-bottom: 1px solid var(--color-border-default);
+        padding: 1.2em 0;
+        
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    
+    h5 {
+        color: var(--color-footer-headers);
+        text-transform: uppercase;
+    }
+    
+    ul {
+        padding: 0;
+    }
+    
+    li {
+        list-style: none outside;
+        
+        a {
+            color: #FFF;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    .rights-reserved > p:last-of-type {
+        padding-bottom: 0;
+    }
+}

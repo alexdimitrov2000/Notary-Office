@@ -1,15 +1,283 @@
-@import url('variables.css');
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather:400,400i,700&display=swap&subset=cyrillic");
+:root {
+  --font-size-default: 12px;
+  --font-size-large: 14px;
+  --font-size-larger: 16px;
+  --font-size-largest: 18px;
+  --font-family-default: 'Fira Sans';
+  --font-family-headings: 'Merriweather';
+  --color-body-text-default: #000;
+  --color-body-bgrd-default: rgb(230, 230, 230);
+  --color-border-default: rgb(173, 216, 230);
+  --color-nav-link-bgrd: rgb(173, 216, 230);
+  --color-nav-link-bgrd-hover: rgb(78, 211, 255);
+  --color-footer-bgrd-default: #565656;
+  --color-footer-headers: rgb(78, 211, 255);
+  --border-radius-nav-links: 0.4em; }
 
-@import url('reset.css');
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
-@import url('typography.css');
+html {
+  box-sizing: border-box;
+  font: var(--font-size-default, 12px)/1.5 var(--font-family-default, sans-serif); }
 
-@import url('layout.css');
+@media (min-width: 500px) {
+  html {
+    font-size: var(--font-size-body-large, 14px); } }
 
-@import url('site-header.css');
-@import url('site-main.css');
-@import url('site-footer.css');
+@media (min-width: 700px) {
+  html {
+    font-size: var(--font-size-body-larger, 16px); } }
 
-@import url('navigation.css');
+@media (min-width: 1600px) {
+  html {
+    font-size: var(--font-size-body-largest, 18px); } }
 
-@import url('transitions.css');
+body, table, form, select, option, input, textarea {
+  font: inherit;
+  background: var(--color-body-bgrd-default, #FFF);
+  color: var(--color-body-text-default, #e6e6e6); }
+
+.site-title,
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  margin-bottom: 0.4em;
+  font-weight: normal;
+  font-family: var(--font-family-headings, serif); }
+
+h1 {
+  font-size: 2.6em; }
+
+h2 {
+  font-size: 2.0em; }
+
+h3 {
+  font-size: 1.8em; }
+
+h4 {
+  font-size: 1.4em; }
+
+h5 {
+  font-size: 1.2em; }
+
+h6 {
+  font-size: 1.0em; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+p, ul, ol {
+  padding-bottom: 1.3em; }
+
+ul, ol {
+  padding-left: 2.5em; }
+
+ul ul, ol ul, ul ol, ol ol {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; }
+
+ol > li > ol > li {
+  list-style-type: lower-roman; }
+
+blockquote {
+  padding: 1rem; }
+
+blockquote .author {
+  font-style: italic;
+  text-align: right;
+  opacity: 0.5; }
+
+blockquote .author:before {
+  display: inline-block;
+  content: '\2014';
+  padding-right: 0.5em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; }
+
+.wrapper {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1em 2em; }
+
+h2 {
+  text-align: center;
+  font-style: italic; }
+
+.site-header {
+  background-color: #FFF;
+  padding-bottom: 0.5em; }
+  .site-header .site-branding {
+    margin-bottom: 1em; }
+    .site-header .site-branding a {
+      display: block;
+      text-align: center; }
+    .site-header .site-branding .site-title {
+      font-size: 2.4em;
+      font-style: italic;
+      font-weight: 700;
+      padding-bottom: 0;
+      margin-bottom: 0; }
+    .site-header .site-branding .site-subtitle {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      font-weight: 700;
+      font-size: 1em;
+      font-style: italic; }
+
+.entry-content {
+  background: linear-gradient(to bottom, rgba(173, 216, 230, 0.1), rgba(173, 216, 230, 0.7)), url("../images/notary-sign.jpg");
+  background-position: center center;
+  background-size: cover; }
+  .entry-content p {
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.9);
+    font-size: 4em;
+    text-align: center;
+    color: #FFF;
+    padding: 1.4em 0.3em;
+    font-style: italic;
+    letter-spacing: 2px; }
+
+.site-main .wrapper > h2 {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; }
+  .site-main .wrapper > h2::before, .site-main .wrapper > h2::after {
+    display: block;
+    content: '';
+    flex-grow: 1;
+    height: 2px;
+    background-color: var(--color-body-text-default);
+    opacity: 0.5; }
+  .site-main .wrapper > h2::before {
+    margin-right: 1em; }
+  .site-main .wrapper > h2::after {
+    margin-left: 1em; }
+
+.office-info {
+  padding: 1em 0; }
+
+.useful-links {
+  padding: 1em 0;
+  background-color: #FFF; }
+  .useful-links ul.links {
+    padding: 0; }
+  .useful-links .link {
+    list-style: none outside;
+    margin: 1.3em 0;
+    text-align: center; }
+    .useful-links .link a {
+      display: block; }
+      .useful-links .link a::after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0.2em;
+        margin: 0 auto;
+        background-color: var(--color-border-default); }
+      .useful-links .link a:hover::after {
+        width: 55%; }
+    .useful-links .link img {
+      max-width: 100%; }
+
+.site-footer {
+  background-color: var(--color-footer-bgrd-default);
+  color: #FFF; }
+  .site-footer section {
+    border-bottom: 1px solid var(--color-border-default);
+    padding: 1.2em 0; }
+    .site-footer section:last-of-type {
+      border-bottom: none; }
+  .site-footer h5 {
+    color: var(--color-footer-headers);
+    text-transform: uppercase; }
+  .site-footer ul {
+    padding: 0; }
+  .site-footer li {
+    list-style: none outside; }
+    .site-footer li a {
+      color: #FFF; }
+      .site-footer li a:hover {
+        text-decoration: underline; }
+  .site-footer .rights-reserved > p:last-of-type {
+    padding-bottom: 0; }
+
+.site-nav ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-around; }
+
+.site-nav li {
+  list-style: none outside;
+  text-transform: uppercase; }
+  .site-nav li a {
+    background-color: var(--color-nav-link-bgrd, lightblue);
+    padding: 0.6em 0;
+    border-radius: var(--border-radius-nav-links, 0.4em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    font-size: 0.8em; }
+    .site-nav li a i.fas {
+      color: var(--color-body-text-default, #000);
+      font-weight: 900;
+      font-size: 1.2em;
+      margin-bottom: 0.1em; }
+    .site-nav li a:hover {
+      background-color: var(--color-nav-link-bgrd-hover, #4ed3ff); }
+
+.site-nav ul li a {
+  transition: background-color 0.2s ease-in; }
+
+.useful-links .link a::after {
+  transition: width 0.3s ease-in; }
+
+.page-home .site-header .site-branding,
+.page-home .site-footer {
+  opacity: 0;
+  transform: translateX(-5em);
+  transition: opacity 0.4s ease-in, transform 0.4s ease-in; }
+
+.page-home .site-header .site-nav li {
+  opacity: 0;
+  transform: translateY(-3em);
+  transition: opacity 0.4s ease-in, transform 0.4s ease-in; }
+  .page-home .site-header .site-nav li:nth-child(1) {
+    transition-delay: 0.5s; }
+  .page-home .site-header .site-nav li:nth-child(2) {
+    transition-delay: 0.6s; }
+  .page-home .site-header .site-nav li:nth-child(3) {
+    transition-delay: 0.7s; }
+
+.page-home .site-main {
+  opacity: 0;
+  transform: translateY(10em);
+  transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+  transition-delay: 0.9s; }
+  .page-home .site-main .entry-content p {
+    opacity: 0;
+    transform: translateY(-7em);
+    transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+    transition-delay: 0.9s; }
+
+.page-home.loaded .site-header .site-branding,
+.page-home.loaded .site-footer {
+  opacity: 1;
+  transform: translateX(0); }
+
+.page-home.loaded .site-header .site-nav li {
+  opacity: 1;
+  transform: translateY(0); }
+
+.page-home.loaded .site-main {
+  opacity: 1;
+  transform: translateY(0); }
+  .page-home.loaded .site-main .entry-content p {
+    opacity: 1;
+    transform: translateY(0); }

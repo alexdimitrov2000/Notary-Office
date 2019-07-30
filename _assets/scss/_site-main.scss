@@ -1,0 +1,82 @@
+.entry-content {
+    background: linear-gradient(to bottom, rgba(173, 216, 230, 0.1), rgba(173, 216, 230, 0.7)), url('../images/notary-sign.jpg');
+    background-position: center center;
+    background-size: cover;
+    
+    p {
+        text-shadow: 2px 2px 7px rgba(0,0,0,0.9);
+        font-size: 4em;
+        text-align: center;
+        color: #FFF;
+        padding: 1.4em 0.3em;
+        font-style: italic;
+        letter-spacing: 2px;
+    }
+}
+
+.site-main .wrapper {
+    & > h2 {
+       display: flex;
+       align-items: center;
+       flex-shrink: 0;
+       
+       &::before,
+       &::after {
+           display: block;
+           content: '';
+           flex-grow: 1;
+           height: 2px;
+           background-color: var(--color-body-text-default);
+           opacity: 0.5;
+       }
+       
+       &::before {
+           margin-right: 1em;
+       }
+       
+       &::after {
+           margin-left: 1em;
+       }
+   }
+
+}
+
+.office-info {
+    padding: 1em 0;
+}
+
+.useful-links {
+    padding: 1em 0;
+    background-color: #FFF;
+    
+    ul.links {
+        padding: 0;
+    }
+    
+    .link {
+        list-style: none outside;
+        margin: 1.3em 0;
+        text-align: center;
+        
+        a {
+            display: block;
+            
+            &::after {
+                display: block;
+                content: '';
+                width: 0;
+                height: 0.2em;
+                margin: 0 auto;
+                background-color: var(--color-border-default);
+            }
+            
+            &:hover::after {
+                width: 55%;
+            }
+        }
+        
+        img {
+            max-width: 100%;
+        }
+    }
+}
