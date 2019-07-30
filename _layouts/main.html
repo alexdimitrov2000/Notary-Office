@@ -12,60 +12,14 @@
 
 <body{% if page.pageName %} class="page-{{page.pageName}}"{% endif %}>
     <div class="site">
-        <header class="site-header">
-            <div class="wrapper">
-                <div class="site-branding">
-                    <a href="{{ site.baseurl }}">
-                        <p class="site-title">
-                            Нотариуси
-                        </p>
-                        <p class="site-subtitle">
-                            Брезник
-                        </p>
-                    </a>
-                </div>
-
-                {% include navigation.html %}
-            </div>
-        </header>
+        {% include header.html %}
 
         <main class="site-main">
             {{ content }}
         </main>
 
-        <footer class="site-footer">
-            <div class="wrapper">
-                <section class="about-office">
-                    <h5>За кантората</h5>
+        {% include footer.html %}
 
-                    <ul>
-                        {% for item in site.pages %}
-                            {% if item.title and item.nonav != 1 %}
-                                <li>
-                                    <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </section>
-
-                <section class="office-contacts">
-                    <h5>Контакти</h5>
-
-                    <ul>
-                        <li>гр.Брезник, ул."Васил Левски" №13</li>
-                        <li>087 8687724</li>
-                        <li>miladinov602@gmail.com</li>
-                    </ul>
-                </section>
-
-                <section class="rights-reserved">
-                    <p>
-                        All rights reserved &copy; 2019
-                    </p>
-                </section>
-            </div>
-        </footer>
     </div>
 
     <script src="{{ site.baseurl }}/scripts/site.js"></script>
