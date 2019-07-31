@@ -19,13 +19,16 @@ description: Notary office Breznik city
 destination: docs
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
+facebook_username: Alex Dimitrov
 github_username:  alexdimitrov2000
 
 # Build settings
 markdown: kramdown
 plugins:
   # - jekyll-feed
+
+collections:
+  - working-team-members
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
