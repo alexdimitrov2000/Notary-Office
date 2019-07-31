@@ -11,6 +11,10 @@
         padding: 1.4em 0.3em;
         font-style: italic;
         letter-spacing: 2px;
+
+        @include bp( small-phone ) {
+            font-size: 3em;
+        }
     }
 }
 
@@ -152,7 +156,6 @@
 
                         strong {
                             opacity: 1;
-                            // transform: scale(1, 1);
                             z-index: 3;
                         }
                     }
@@ -174,6 +177,21 @@
 
                 .position {
                     padding-bottom: 0;
+                }
+            }
+
+            @include bp( small-tablet ) {
+                &.notary {
+                    grid-column: span 3;
+                }
+
+                &.deputy,
+                &.assistant {
+                    grid-column: span 2;
+
+                    h4 {
+                        font-size: 1.2em;
+                    }
                 }
             }
         }
