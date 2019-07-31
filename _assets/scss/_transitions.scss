@@ -52,19 +52,11 @@
             transform: translateX(0);
         }
         
-        .site-header .site-nav li {
+        .site-header .site-nav li,
+        .site-main,
+        .site-main .entry-content p {
             opacity: 1;
             transform: translateY(0);
-        }
-        
-        .site-main {
-            opacity: 1;
-            transform: translateY(0);
-            
-            .entry-content p {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
     }
 }

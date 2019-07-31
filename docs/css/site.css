@@ -184,8 +184,11 @@ h2 {
     .useful-links .link img {
       max-width: 100%; }
 
+.working-team .wrapper {
+  padding: 2em; }
+
 .working-team .workers {
-  padding: 0 0.5em;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 1.5em; }
@@ -231,22 +234,26 @@ h2 {
           color: #FFF;
           opacity: 0;
           text-align: center; }
-        .working-team .workers li .media > a:active img, .working-team .workers li .media > a:hover img {
-          position: relative;
-          z-index: 1; }
-        .working-team .workers li .media > a:active::before, .working-team .workers li .media > a:hover::before {
-          background: rgba(0, 0, 0, 0.8);
-          z-index: 2; }
-        .working-team .workers li .media > a:active strong, .working-team .workers li .media > a:hover strong {
-          opacity: 1;
-          z-index: 3; }
+        .working-team .workers li .media > a:active, .working-team .workers li .media > a:hover {
+          cursor: pointer; }
+          .working-team .workers li .media > a:active img, .working-team .workers li .media > a:hover img {
+            position: relative;
+            z-index: 1; }
+          .working-team .workers li .media > a:active::before, .working-team .workers li .media > a:hover::before {
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2; }
+          .working-team .workers li .media > a:active strong, .working-team .workers li .media > a:hover strong {
+            opacity: 1;
+            z-index: 3; }
       .working-team .workers li .media img {
         height: auto;
         width: 100%;
         border-top-left-radius: 0.3em;
         border-top-right-radius: 0.3em; }
     .working-team .workers li .member-data {
-      padding: 1.5em; }
+      padding: 2em 1.5em; }
+      .working-team .workers li .member-data .position {
+        padding-bottom: 0; }
 
 .site-footer {
   background-color: var(--color-footer-bgrd-default);
@@ -335,16 +342,11 @@ h2 {
   opacity: 1;
   transform: translateX(0); }
 
-.page-home.loaded .site-header .site-nav li {
+.page-home.loaded .site-header .site-nav li,
+.page-home.loaded .site-main,
+.page-home.loaded .site-main .entry-content p {
   opacity: 1;
   transform: translateY(0); }
-
-.page-home.loaded .site-main {
-  opacity: 1;
-  transform: translateY(0); }
-  .page-home.loaded .site-main .entry-content p {
-    opacity: 1;
-    transform: translateY(0); }
 
 .working-team .workers li .media > a::before {
   transition: background 0.3s ease-in; }

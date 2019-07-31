@@ -82,8 +82,10 @@
 }
 
 .working-team {
+    .wrapper { padding: 2em; }
+
     .workers { 
-        padding: 0 0.5em;
+        padding: 0;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-gap: 1.5em;
@@ -137,6 +139,7 @@
 
                     &:active,
                     &:hover {
+                        cursor: pointer;
                         img {
                             position: relative;
                             z-index: 1;
@@ -167,7 +170,11 @@
             }
 
             .member-data {
-                padding: 1.5em;
+                padding: 2em 1.5em;
+
+                .position {
+                    padding-bottom: 0;
+                }
             }
         }
     }
