@@ -184,6 +184,70 @@ h2 {
     .useful-links .link img {
       max-width: 100%; }
 
+.working-team .workers {
+  padding: 0 0.5em;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1.5em; }
+  .working-team .workers li {
+    list-style: none outside;
+    background-color: #FFF;
+    grid-column-start: span 6;
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.7em 0 rgba(0, 0, 0, 0.5); }
+    .working-team .workers li .media {
+      overflow: hidden;
+      position: relative; }
+      .working-team .workers li .media a,
+      .working-team .workers li .media span,
+      .working-team .workers li .media img {
+        display: block; }
+      .working-team .workers li .media::before {
+        display: block;
+        content: '';
+        padding-top: 56.25%; }
+      .working-team .workers li .media > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+        .working-team .workers li .media > a::before {
+          display: block;
+          content: '';
+          background: rgba(0, 0, 0, 0);
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          border-top-left-radius: 0.3em;
+          border-top-right-radius: 0.3em; }
+        .working-team .workers li .media > a strong {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #FFF;
+          opacity: 0;
+          text-align: center; }
+        .working-team .workers li .media > a:active img, .working-team .workers li .media > a:hover img {
+          position: relative;
+          z-index: 1; }
+        .working-team .workers li .media > a:active::before, .working-team .workers li .media > a:hover::before {
+          background: rgba(0, 0, 0, 0.8);
+          z-index: 2; }
+        .working-team .workers li .media > a:active strong, .working-team .workers li .media > a:hover strong {
+          opacity: 1;
+          z-index: 3; }
+      .working-team .workers li .media img {
+        height: auto;
+        width: 100%;
+        border-top-left-radius: 0.3em;
+        border-top-right-radius: 0.3em; }
+    .working-team .workers li .member-data {
+      padding: 1.5em; }
+
 .site-footer {
   background-color: var(--color-footer-bgrd-default);
   color: #FFF; }
@@ -281,3 +345,9 @@ h2 {
   .page-home.loaded .site-main .entry-content p {
     opacity: 1;
     transform: translateY(0); }
+
+.working-team .workers li .media > a::before {
+  transition: background 0.3s ease-in; }
+
+.working-team .workers li .media > a strong {
+  transition: opacity 0.3s ease-in; }

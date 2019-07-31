@@ -68,3 +68,15 @@
         }
     }
 }
+
+.working-team {
+    .workers li .media > a {
+        &::before {
+            transition: background 0.3s ease-in;
+        }
+
+        strong {
+            transition: opacity 0.3s ease-in;
+        }
+    }
+}

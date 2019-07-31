@@ -80,3 +80,95 @@
         }
     }
 }
+
+.working-team {
+    .workers { 
+        padding: 0 0.5em;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1.5em;
+
+        li {
+            list-style: none outside;
+            background-color: #FFF;
+            grid-column-start: span 6;
+            border-radius: 0.3em;
+            box-shadow: 0 0 0.7em 0 rgba(0,0,0,0.5);
+
+            .media {
+                overflow: hidden;
+                position: relative;
+
+                a,
+                span,
+                img {
+                    display: block;
+                }
+                
+                &::before {
+                    display: block;
+                    content: '';
+                    padding-top: 56.25%;
+                }
+
+                & > a {
+                    position: absolute;
+                    top: 0; left: 0; right: 0; bottom: 0;
+                    
+                    &::before {
+                        display: block;
+                        content: '';
+                        background: rgba(0,0,0,0.0);
+                        position: absolute;
+                        top: 0; right: 0; bottom: 0; left: 0;
+                        border-top-left-radius: 0.3em;
+                        border-top-right-radius: 0.3em;
+                    }
+
+                    strong {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #FFF;
+                        opacity: 0;
+                        text-align: center;
+                    }
+
+                    &:active,
+                    &:hover {
+                        img {
+                            position: relative;
+                            z-index: 1;
+                        }
+
+                        &::before {
+                            background: rgba(0,0,0,0.8);
+                            z-index: 2;
+                        }
+
+                        strong {
+                            opacity: 1;
+                            // transform: scale(1, 1);
+                            z-index: 3;
+                        }
+                    }
+
+
+                }
+
+                img {
+                    height: auto;
+                    width: 100%;
+
+                    border-top-left-radius: 0.3em;
+                    border-top-right-radius: 0.3em;
+                }
+            }
+
+            .member-data {
+                padding: 1.5em;
+            }
+        }
+    }
+}

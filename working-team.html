@@ -7,4 +7,30 @@ pageName: working-team
 icon: fa-users
 ---
 
-<h2>{{page.title}}</h2>
+<section class="working-team">
+    <div class="wrapper">
+        <h2>{{page.title}}</h2>
+
+        <ul class="workers">
+            {% assign team-members = site.working-team-members | sort:"order", "first" %}
+            {% for worker in team-members %}
+
+                <li class="{{ worker.profession }}">
+                    <div class="media">
+                        <a href="#">
+                            <span class="member-image">
+                                <img src="{{ worker.image_src }}" alt="{{ worker.name }}">
+                            </span>
+                            <strong class="member-info">{{ worker.content }}</strong>
+                        </a>
+                    </div>
+                    <div class="member-data">
+                        <h4>{{ worker.name }}</h4>
+                        <p class="position">{{ worker.position }}</p>
+                    </div>
+                </li>
+
+            {% endfor %}
+        </ul>
+    </div>
+</section>
