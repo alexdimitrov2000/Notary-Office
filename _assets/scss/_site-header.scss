@@ -26,4 +26,16 @@
             font-style: italic;
         }
     }
+
+    @include bp ( small-desktop ) {
+        .wrapper {
+            display: flex;
+            align-items: center;
+            padding: 0.5em 2em;
+
+            .site-branding {
+                margin-bottom: 0;
+            }
+        }
+    }
 }

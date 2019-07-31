@@ -32,4 +32,23 @@
             }
         }
     }
+
+    @include bp( small-desktop ) {
+        margin-left: auto;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 1.5em;
+
+            a {
+                flex-direction: row;
+                padding: 0.8em 1em;
+
+                i {
+                    margin-right: 0.4em;
+                }
+            }
+        }
+    }
 }
