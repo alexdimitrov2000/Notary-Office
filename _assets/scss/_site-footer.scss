@@ -32,7 +32,59 @@
         }
     }
     
-    .rights-reserved > p:last-of-type {
-        padding-bottom: 0;
+    .rights-reserved {
+        opacity: 0.7;
+
+        & > p {
+            padding-bottom: 0;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0.3em 0;
+
+            li {
+                list-style: none outside;
+                margin-right: 1em;
+
+                &:last-of-type { margin-right: 0; }
+            }
+            
+            a {
+                &::before {
+                    display: block;
+                    font-family: 'Font Awesome 5 Brands';
+                    font-size: 1.2em;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    color: var(--color-nav-link-bgrd-hover);
+                }
+            }
+
+            .facebook::before { content: '\f082'; }
+            
+            .instagram::before { content: '\f16d'; }
+            
+            .github::before { content: '\f09b'; }
+        }
+    }
+
+    @include bp( small-desktop ) {
+        & {
+            padding-bottom: 1.2em;
+        }
+
+        section {
+            border: none;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2em;
+        }
     }
 }

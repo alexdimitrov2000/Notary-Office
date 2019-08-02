@@ -152,20 +152,20 @@ h2 {
       .entry-content p {
         font-size: 3em; } }
 
-.site-main .wrapper > h2 {
+.site-main .wrapper header > h2 {
   display: flex;
   align-items: center;
   flex-shrink: 0; }
-  .site-main .wrapper > h2::before, .site-main .wrapper > h2::after {
+  .site-main .wrapper header > h2::before, .site-main .wrapper header > h2::after {
     display: block;
     content: '';
     flex-grow: 1;
     height: 2px;
     background-color: var(--color-body-text-default);
     opacity: 0.5; }
-  .site-main .wrapper > h2::before {
+  .site-main .wrapper header > h2::before {
     margin-right: 1em; }
-  .site-main .wrapper > h2::after {
+  .site-main .wrapper header > h2::after {
     margin-left: 1em; }
 
 .office-info {
@@ -291,8 +291,41 @@ h2 {
       color: #FFF; }
       .site-footer li a:hover {
         text-decoration: underline; }
-  .site-footer .rights-reserved > p:last-of-type {
-    padding-bottom: 0; }
+  .site-footer .rights-reserved {
+    opacity: 0.7; }
+    .site-footer .rights-reserved > p {
+      padding-bottom: 0; }
+    .site-footer .rights-reserved .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0.3em 0; }
+      .site-footer .rights-reserved .social-links li {
+        list-style: none outside;
+        margin-right: 1em; }
+        .site-footer .rights-reserved .social-links li:last-of-type {
+          margin-right: 0; }
+      .site-footer .rights-reserved .social-links a::before {
+        display: block;
+        font-family: 'Font Awesome 5 Brands';
+        font-size: 1.2em; }
+      .site-footer .rights-reserved .social-links a:hover {
+        text-decoration: none;
+        color: var(--color-nav-link-bgrd-hover); }
+      .site-footer .rights-reserved .social-links .facebook::before {
+        content: '\f082'; }
+      .site-footer .rights-reserved .social-links .instagram::before {
+        content: '\f16d'; }
+      .site-footer .rights-reserved .social-links .github::before {
+        content: '\f09b'; }
+  @media (min-width: 925px) {
+    .site-footer {
+      padding-bottom: 1.2em; }
+    .site-footer section {
+      border: none; }
+    .site-footer .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2em; } }
 
 .site-nav ul {
   padding: 0;
@@ -385,3 +418,6 @@ h2 {
 
 .working-team .workers li .media > a strong {
   transition: opacity 0.3s ease-in; }
+
+.site-footer .social-links a {
+  transition: color 0.2s ease-in; }
