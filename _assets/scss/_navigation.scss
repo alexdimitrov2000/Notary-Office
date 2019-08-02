@@ -27,7 +27,8 @@
                 margin-bottom: 0.1em;
             }
             
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: var(--color-nav-link-bgrd-hover, rgb(78, 211, 255));
             }
         }
