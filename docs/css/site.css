@@ -189,10 +189,18 @@ h2 {
         height: 0.2em;
         margin: 0 auto;
         background-color: var(--color-border-default); }
-      .useful-links .link a:hover::after {
+      .useful-links .link a:focus::after, .useful-links .link a:hover::after {
         width: 55%; }
     .useful-links .link img {
       max-width: 100%; }
+  @media (min-width: 925px) {
+    .useful-links .links {
+      display: flex;
+      flex-wrap: wrap; }
+      .useful-links .links li {
+        flex: 1 0 30%; }
+        .useful-links .links li:not(:last-of-type) {
+          margin-right: 0.7em; } }
 
 .working-team .wrapper {
   padding: 2em; }
@@ -350,7 +358,7 @@ h2 {
       font-weight: 900;
       font-size: 1.2em;
       margin-bottom: 0.1em; }
-    .site-nav li a:hover {
+    .site-nav li a:hover, .site-nav li a:focus {
       background-color: var(--color-nav-link-bgrd-hover, #4ed3ff); }
   .site-nav li.selected > a {
     background-color: var(--color-nav-link-bgrd-hover, #4ed3ff); }

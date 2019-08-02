@@ -74,6 +74,7 @@
                 background-color: var(--color-border-default);
             }
             
+            &:focus::after,
             &:hover::after {
                 width: 55%;
             }
@@ -81,6 +82,21 @@
         
         img {
             max-width: 100%;
+        }
+    }
+
+    @include bp( small-desktop ) {
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                flex: 1 0 30%;
+                
+                &:not(:last-of-type) {
+                    margin-right: 0.7em;
+                }
+            }
         }
     }
 }
