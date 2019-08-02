@@ -12,8 +12,7 @@ icon: fa-users
         <h2>{{page.title}}</h2>
 
         <ul class="workers">
-            {% assign team-members = site.working-team-members | sort:"order", "first" %}
-            {% for worker in team-members %}
+            {% for worker in site.working-team-members %}
 
                 <li class="{{ worker.profession }}">
                     <div class="media">
@@ -21,7 +20,7 @@ icon: fa-users
                             <span class="member-image">
                                 <img src="{{ worker.image_src }}" alt="{{ worker.name }}">
                             </span>
-                            <strong class="member-info">{{ worker.content }}</strong>
+                            <strong class="member-info">{{ worker.description }}</strong>
                         </a>
                     </div>
                     <div class="member-data">

@@ -27,9 +27,6 @@ markdown: kramdown
 plugins:
   # - jekyll-feed
 
-collections:
-  - working-team-members
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -46,3 +43,30 @@ exclude:
   - gulpfile.js
   - package.json
   - package-lock.json
+
+working-team-members:
+  - name: Ивайло Миладинов
+    profession: notary
+    position: Нотариус
+    image_src: ../images/notary-man.jpg
+    description: Нотариус от 2009 г. – вписан в Нотариалната Камара на Република България под № 602.
+  - name: Александър Цветанов
+    profession: notary
+    position: Нотариус
+    image_src: ../images/notary-man.jpg
+    description: Нотариус от 2009 г. – вписан в Нотариалната Камара на Република България под № 576.
+  - name: Евгени Гюров
+    profession: deputy
+    position: Помощник-нотариус
+    image_src: ../images/young-assistant.jpg
+    description: Помощник-нотариус от 2010 година.
+  - name: Цветелина Димитрова
+    profession: assistant
+    position: Деловодител
+    image_src: ../images/assistant-woman.jpg
+    description: Деловодител от 2009 година.
+  - name: Татяна Цветанова
+    profession: assistant
+    position: Деловодител
+    image_src: ../images/assistant-woman.jpg
+    description: Деловодител от 2011 година.
