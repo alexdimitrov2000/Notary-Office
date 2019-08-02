@@ -319,6 +319,8 @@ h2 {
       margin-bottom: 0.1em; }
     .site-nav li a:hover {
       background-color: var(--color-nav-link-bgrd-hover, #4ed3ff); }
+  .site-nav li.selected > a {
+    background-color: var(--color-nav-link-bgrd-hover, #4ed3ff); }
 
 @media (min-width: 925px) {
   .site-nav {

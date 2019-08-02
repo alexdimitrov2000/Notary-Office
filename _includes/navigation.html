@@ -3,7 +3,7 @@
         {% assign nav = site.pages | sort:"order", "first" %}
         {% for item in nav %}
             {% if item.title and item.nonav != 1 %}
-                <li>
+                <li{% if item.url == page.url %} class="selected"{% endif %}>
                     <a href="{{ site.baseurl }}{{ item.url }}">{% if item.icon %}<i class="fas {{ item.icon }}"></i>{% endif %} {{ item.title }}</a>
                 </li>
             {% endif %}

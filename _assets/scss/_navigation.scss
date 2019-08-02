@@ -31,6 +31,10 @@
                 background-color: var(--color-nav-link-bgrd-hover, rgb(78, 211, 255));
             }
         }
+
+        &.selected > a {
+            background-color: var(--color-nav-link-bgrd-hover, rgb(78, 211, 255));
+        }
     }
 
     @include bp( small-desktop ) {
