@@ -280,6 +280,21 @@ h2 {
         .working-team .workers li.deputy h4, .working-team .workers li.assistant h4 {
           font-size: 1.2em; } }
 
+.contacts-main {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.3em;
+  overflow: hidden;
+  background-color: #FFF;
+  box-shadow: 0 0 0.3em 0.1em rgba(0, 0, 0, 0.5); }
+  .contacts-main .map {
+    flex-basis: 50%; }
+  .contacts-main .contacts-info {
+    flex: 1 0 45%;
+    padding-left: 1em;
+    margin: 1em;
+    border-left: 2px solid var(--color-border-default); }
+
 .site-footer {
   background-color: var(--color-footer-bgrd-default);
   color: #FFF; }
