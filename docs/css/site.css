@@ -11,6 +11,7 @@
   --color-border-default: rgb(173, 216, 230);
   --color-nav-link-bgrd: rgb(173, 216, 230);
   --color-nav-link-bgrd-hover: rgb(78, 211, 255);
+  --color-contacts-info-headers: rgb(78, 211, 255);
   --color-footer-bgrd-default: #565656;
   --color-footer-headers: rgb(78, 211, 255);
   --border-radius-nav-links: 0.4em; }
@@ -280,20 +281,48 @@ h2 {
         .working-team .workers li.deputy h4, .working-team .workers li.assistant h4 {
           font-size: 1.2em; } }
 
-.contacts-main {
+.contacts-card {
   display: flex;
   flex-wrap: wrap;
+  margin: 1em 0;
   border-radius: 0.3em;
   overflow: hidden;
   background-color: #FFF;
   box-shadow: 0 0 0.3em 0.1em rgba(0, 0, 0, 0.5); }
-  .contacts-main .map {
-    flex-basis: 50%; }
-  .contacts-main .contacts-info {
-    flex: 1 0 45%;
+  .contacts-card .map {
+    flex-grow: 1;
+    height: 17em; }
+  .contacts-card .contacts-info {
+    flex: 1 0 100%;
     padding-left: 1em;
     margin: 1em;
+    margin-left: 1.2em;
     border-left: 2px solid var(--color-border-default); }
+    .contacts-card .contacts-info h5 {
+      color: var(--color-contacts-info-headers); }
+  .contacts-card ul {
+    padding-left: 0; }
+  .contacts-card li {
+    list-style: none outside; }
+    .contacts-card li i {
+      width: 1.2em; }
+
+@media (min-width: 925px) {
+  .contacts-main {
+    display: flex;
+    align-items: center;
+    min-height: 606px; }
+  .contacts-card {
+    flex-grow: 1; }
+  .contacts .map {
+    flex: 0 0 50%;
+    height: unset; }
+  .contacts .contacts-info {
+    flex: 1 0 45%; } }
+
+@media (min-width: 1600px) {
+  .contacts-main {
+    min-height: 555px; } }
 
 .site-footer {
   background-color: var(--color-footer-bgrd-default);
@@ -436,11 +465,35 @@ h2 {
   opacity: 1;
   transform: translateY(0); }
 
-.working-team .workers li .media > a::before {
-  transition: background 0.3s ease-in; }
+.working-team h2 {
+  opacity: 0;
+  transform: translateX(-17em);
+  transition: opacity 0.4s ease-in, transform 0.4s ease-in; }
+  .page-working-team.loaded .working-team h2 {
+    opacity: 1;
+    transform: translateX(0); }
 
-.working-team .workers li .media > a strong {
-  transition: opacity 0.3s ease-in; }
+.working-team .workers li {
+  opacity: 0;
+  transform: translate(-3em, -3em);
+  transition: opacity 0.4s ease-in, transform 0.4s ease-in; }
+  .working-team .workers li:nth-child(1) {
+    transition-delay: 0.5s; }
+  .working-team .workers li:nth-child(2) {
+    transition-delay: 0.7s; }
+  .working-team .workers li:nth-child(3) {
+    transition-delay: 0.9s; }
+  .working-team .workers li:nth-child(4) {
+    transition-delay: 1.1s; }
+  .working-team .workers li:nth-child(5) {
+    transition-delay: 1.3s; }
+  .working-team .workers li .media > a::before {
+    transition: background 0.3s ease-in; }
+  .working-team .workers li .media > a strong {
+    transition: opacity 0.3s ease-in; }
+  .page-working-team.loaded .working-team .workers li {
+    opacity: 1;
+    transform: translate(0, 0); }
 
 .site-footer .social-links a {
   transition: color 0.2s ease-in; }
