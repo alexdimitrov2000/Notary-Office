@@ -62,13 +62,41 @@
 }
 
 .working-team {
-    .workers li .media > a {
-        &::before {
-            transition: background 0.3s ease-in;
+    h2 {
+        opacity: 0;
+        transform: translateX(-17em);
+        
+        transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+
+        .page-working-team.loaded & {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .workers li {
+        opacity: 0;
+        transform: translate(-3em, -3em);
+        
+        transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+        
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) { transition-delay: ($i * 0.2s) + 0.3s; }
         }
 
-        strong {
-            transition: opacity 0.3s ease-in;
+        .media > a {
+            &::before {
+                transition: background 0.3s ease-in;
+            }
+
+            strong {
+                transition: opacity 0.3s ease-in;
+            }
+        }
+
+        .page-working-team.loaded & {
+            opacity: 1;
+            transform: translate(0, 0);
         }
     }
 }
