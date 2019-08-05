@@ -311,7 +311,7 @@ h2 {
   .contacts-main {
     display: flex;
     align-items: center;
-    min-height: 606px; }
+    min-height: 508px; }
   .contacts-card {
     flex-grow: 1; }
   .contacts .map {
@@ -322,7 +322,7 @@ h2 {
 
 @media (min-width: 1600px) {
   .contacts-main {
-    min-height: 555px; } }
+    min-height: 454px; } }
 
 .site-footer {
   background-color: var(--color-footer-bgrd-default);

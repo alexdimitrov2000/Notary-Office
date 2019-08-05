@@ -254,15 +254,11 @@
         }
     }
 
-    @include bp( tablet ) {
-        
-    }
-
     @include bp( small-desktop ) {
         &-main {
             display: flex;
             align-items: center;
-            min-height: 606px;
+            min-height: 508px;
         }
 
         &-card {
@@ -281,7 +277,7 @@
 
     @include bp( laptop ) {
         &-main {
-            min-height: 555px;
+            min-height: 454px;
         }
     }
 }
