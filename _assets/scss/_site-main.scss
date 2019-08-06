@@ -118,6 +118,7 @@
             box-shadow: 0 0 0.7em 0 rgba(0,0,0,0.5);
 
             .media {
+                display: block;
                 overflow: hidden;
                 position: relative;
 
@@ -188,10 +189,18 @@
                 }
             }
 
-            .member-data {
-                padding: 2em 1.5em;
+            .member {
+                &-data {
+                    display: block;
+                    padding: 2em 1.5em;
+                }
 
-                .position {
+                &-name {
+                    display: block;
+                    font-size: 1.4em;
+                }
+
+                &-position {
                     padding-bottom: 0;
                 }
             }
@@ -205,7 +214,7 @@
                 &.assistant {
                     grid-column: span 2;
 
-                    h4 {
+                    .member-name {
                         font-size: 1.2em;
                     }
                 }
@@ -215,6 +224,8 @@
 }
 
 .contacts {
+    .wrapper { padding: 2em; }
+
     &-card {
         display: flex;
         flex-wrap: wrap;

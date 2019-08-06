@@ -10,25 +10,25 @@ icon: fa-users
 <section class="working-team">
     <div class="wrapper">
         <header>
-            <h2>{{page.title}}</h2>
+            <h2 class="page-title">{{page.title}}</h2>
         </header>
 
         <ul class="workers">
             {% for worker in site.working-team-members %}
 
                 <li class="{{ worker.profession }}">
-                    <div class="media">
+                    <span class="media">
                         <a>
                             <span class="member-image">
                                 <img src="{{ worker.image_src }}" alt="{{ worker.name }}">
                             </span>
                             <strong class="member-info">{{ worker.description }}</strong>
                         </a>
-                    </div>
-                    <div class="member-data">
-                        <h4>{{ worker.name }}</h4>
-                        <p class="position">{{ worker.position }}</p>
-                    </div>
+                    </span>
+                    <span class="member-data">
+                        <strong class="member-name">{{ worker.name }}</strong>
+                        <span class="member-position">{{ worker.position }}</span>
+                    </span>
                 </li>
 
             {% endfor %}
