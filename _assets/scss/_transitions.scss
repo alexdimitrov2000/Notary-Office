@@ -6,98 +6,13 @@
     transition: width 0.3s ease-in;
 }
 
-.page-home {
-    .site-header .site-branding,
-    .site-footer {
-        opacity: 0;
-        transform: translateX(-5em);
-    
-        transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+.workers .media > a {
+    &::before {
+        transition: background 0.3s ease-in;
     }
 
-    .site-header .site-nav {
-        li {
-            opacity: 0;
-            transform: translateY(-3em);
-            
-            transition: opacity 0.4s ease-in, transform 0.4s ease-in;
-            
-            @for $i from 1 through 3 {
-                &:nth-child(#{$i}) { transition-delay: ($i * 0.1s) + 0.4s; }
-            }
-        }
-        
-    }
-    
-    .site-main {
-        opacity: 0;
-        transform: translateY(10em);
-    
-        transition: opacity 0.6s ease-in, transform 0.6s ease-in;
-        transition-delay: 0.9s;
-        
-        .entry-content p {
-            opacity: 0;
-            transform: translateY(-7em);
-        
-            transition: opacity 0.6s ease-in, transform 0.6s ease-in;
-            transition-delay: 0.9s;
-        }
-    }
-    
-    &.loaded {
-        .site-header .site-branding,
-        .site-footer {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        .site-header .site-nav li,
-        .site-main,
-        .site-main .entry-content p {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-}
-
-.working-team {
-    h2 {
-        opacity: 0;
-        transform: translateX(-17em);
-        
-        transition: opacity 0.4s ease-in, transform 0.4s ease-in;
-
-        .page-working-team.loaded & {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    .workers li {
-        opacity: 0;
-        transform: translate(-3em, -3em);
-        
-        transition: opacity 0.4s ease-in, transform 0.4s ease-in;
-        
-        @for $i from 1 through 5 {
-            &:nth-child(#{$i}) { transition-delay: ($i * 0.2s) + 0.3s; }
-        }
-
-        .media > a {
-            &::before {
-                transition: background 0.3s ease-in;
-            }
-
-            strong {
-                transition: opacity 0.3s ease-in;
-            }
-        }
-
-        .page-working-team.loaded & {
-            opacity: 1;
-            transform: translate(0, 0);
-        }
+    strong {
+        transition: opacity 0.3s ease-in;
     }
 }
 

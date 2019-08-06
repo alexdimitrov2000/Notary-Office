@@ -218,6 +218,7 @@ h2 {
     border-radius: 0.3em;
     box-shadow: 0 0 0.7em 0 rgba(0, 0, 0, 0.5); }
     .working-team .workers li .media {
+      display: block;
       overflow: hidden;
       position: relative; }
       .working-team .workers li .media a,
@@ -270,16 +271,23 @@ h2 {
         border-top-left-radius: 0.3em;
         border-top-right-radius: 0.3em; }
     .working-team .workers li .member-data {
+      display: block;
       padding: 2em 1.5em; }
-      .working-team .workers li .member-data .position {
-        padding-bottom: 0; }
+    .working-team .workers li .member-name {
+      display: block;
+      font-size: 1.4em; }
+    .working-team .workers li .member-position {
+      padding-bottom: 0; }
     @media (min-width: 650px) {
       .working-team .workers li.notary {
         grid-column: span 3; }
       .working-team .workers li.deputy, .working-team .workers li.assistant {
         grid-column: span 2; }
-        .working-team .workers li.deputy h4, .working-team .workers li.assistant h4 {
+        .working-team .workers li.deputy .member-name, .working-team .workers li.assistant .member-name {
           font-size: 1.2em; } }
+
+.contacts .wrapper {
+  padding: 2em; }
 
 .contacts-card {
   display: flex;
@@ -426,74 +434,193 @@ h2 {
 .useful-links .link a::after {
   transition: width 0.3s ease-in; }
 
-.page-home .site-header .site-branding,
-.page-home .site-footer {
-  opacity: 0;
-  transform: translateX(-5em);
-  transition: opacity 0.4s ease-in, transform 0.4s ease-in; }
+.workers .media > a::before {
+  transition: background 0.3s ease-in; }
 
-.page-home .site-header .site-nav li {
-  opacity: 0;
-  transform: translateY(-3em);
-  transition: opacity 0.4s ease-in, transform 0.4s ease-in; }
-  .page-home .site-header .site-nav li:nth-child(1) {
-    transition-delay: 0.5s; }
-  .page-home .site-header .site-nav li:nth-child(2) {
-    transition-delay: 0.6s; }
-  .page-home .site-header .site-nav li:nth-child(3) {
-    transition-delay: 0.7s; }
-
-.page-home .site-main {
-  opacity: 0;
-  transform: translateY(10em);
-  transition: opacity 0.6s ease-in, transform 0.6s ease-in;
-  transition-delay: 0.9s; }
-  .page-home .site-main .entry-content p {
-    opacity: 0;
-    transform: translateY(-7em);
-    transition: opacity 0.6s ease-in, transform 0.6s ease-in;
-    transition-delay: 0.9s; }
-
-.page-home.loaded .site-header .site-branding,
-.page-home.loaded .site-footer {
-  opacity: 1;
-  transform: translateX(0); }
-
-.page-home.loaded .site-header .site-nav li,
-.page-home.loaded .site-main,
-.page-home.loaded .site-main .entry-content p {
-  opacity: 1;
-  transform: translateY(0); }
-
-.working-team h2 {
-  opacity: 0;
-  transform: translateX(-17em);
-  transition: opacity 0.4s ease-in, transform 0.4s ease-in; }
-  .page-working-team.loaded .working-team h2 {
-    opacity: 1;
-    transform: translateX(0); }
-
-.working-team .workers li {
-  opacity: 0;
-  transform: translate(-3em, -3em);
-  transition: opacity 0.4s ease-in, transform 0.4s ease-in; }
-  .working-team .workers li:nth-child(1) {
-    transition-delay: 0.5s; }
-  .working-team .workers li:nth-child(2) {
-    transition-delay: 0.7s; }
-  .working-team .workers li:nth-child(3) {
-    transition-delay: 0.9s; }
-  .working-team .workers li:nth-child(4) {
-    transition-delay: 1.1s; }
-  .working-team .workers li:nth-child(5) {
-    transition-delay: 1.3s; }
-  .working-team .workers li .media > a::before {
-    transition: background 0.3s ease-in; }
-  .working-team .workers li .media > a strong {
-    transition: opacity 0.3s ease-in; }
-  .page-working-team.loaded .working-team .workers li {
-    opacity: 1;
-    transform: translate(0, 0); }
+.workers .media > a strong {
+  transition: opacity 0.3s ease-in; }
 
 .site-footer .social-links a {
   transition: color 0.2s ease-in; }
+
+@-webkit-keyframes brandingSlideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-5em); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes brandingSlideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-5em); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@-webkit-keyframes headingSlideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-17em); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes headingSlideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-17em); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@-webkit-keyframes navFallToBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-3em); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes navFallToBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-3em); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@-webkit-keyframes entryParFallToBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-7em); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes entryParFallToBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-7em); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@-webkit-keyframes mainFallToTop {
+  from {
+    opacity: 0;
+    transform: translateY(10em); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes mainFallToTop {
+  from {
+    opacity: 0;
+    transform: translateY(10em); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@-webkit-keyframes fallSlideIn {
+  from {
+    opacity: 0;
+    transform: translate(-3em, -3em); }
+  to {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes fallSlideIn {
+  from {
+    opacity: 0;
+    transform: translate(-3em, -3em); }
+  to {
+    opacity: 1;
+    transform: translate(0); } }
+
+.page-home .site-header .site-branding,
+.page-home .site-footer {
+  opacity: 0;
+  -webkit-animation: brandingSlideInFromLeft 0.4s ease-in;
+          animation: brandingSlideInFromLeft 0.4s ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.page-home .site-header .site-nav li {
+  opacity: 0;
+  -webkit-animation: navFallToBottom 0.4s ease-in;
+          animation: navFallToBottom 0.4s ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+  .page-home .site-header .site-nav li:nth-child(1) {
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s; }
+  .page-home .site-header .site-nav li:nth-child(2) {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s; }
+  .page-home .site-header .site-nav li:nth-child(3) {
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s; }
+
+.page-home .site-main {
+  opacity: 0;
+  -webkit-animation: mainFallToTop 0.6s ease-in;
+          animation: mainFallToTop 0.6s ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s; }
+  .page-home .site-main .entry-content p {
+    opacity: 0;
+    -webkit-animation: entryParFallToBottom 0.6s ease-in;
+            animation: entryParFallToBottom 0.6s ease-in;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s; }
+
+.working-team .page-title {
+  opacity: 0;
+  -webkit-animation: headingSlideInFromLeft 0.4s ease-in;
+          animation: headingSlideInFromLeft 0.4s ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.working-team .workers li {
+  opacity: 0;
+  -webkit-animation: fallSlideIn 0.4s ease-in;
+          animation: fallSlideIn 0.4s ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+  .working-team .workers li:nth-child(1) {
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s; }
+  .working-team .workers li:nth-child(2) {
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s; }
+  .working-team .workers li:nth-child(3) {
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s; }
+  .working-team .workers li:nth-child(4) {
+    -webkit-animation-delay: 1.1s;
+            animation-delay: 1.1s; }
+  .working-team .workers li:nth-child(5) {
+    -webkit-animation-delay: 1.3s;
+            animation-delay: 1.3s; }
+
+.contacts .page-title {
+  opacity: 0;
+  -webkit-animation: headingSlideInFromLeft 0.4s ease-in;
+          animation: headingSlideInFromLeft 0.4s ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.contacts-main {
+  opacity: 0;
+  -webkit-animation: fallSlideIn 0.5s ease-in;
+          animation: fallSlideIn 0.5s ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; }

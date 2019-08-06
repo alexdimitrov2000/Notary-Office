@@ -1,0 +1,140 @@
+@keyframes brandingSlideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-5em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes headingSlideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-17em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes navFallToBottom {
+    from {
+        opacity: 0;
+        transform: translateY(-3em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes entryParFallToBottom {
+    from {
+        opacity: 0;
+        transform: translateY(-7em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mainFallToTop {
+    from {
+        opacity: 0;
+        transform: translateY(10em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fallSlideIn {
+    from {
+        opacity: 0;
+        transform: translate(-3em, -3em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.page-home {
+    .site-header .site-branding,
+    .site-footer {
+        opacity: 0;
+        animation: brandingSlideInFromLeft 0.4s ease-in;
+        animation-fill-mode: both;
+    }
+
+    .site-header .site-nav {
+        li {
+            opacity: 0;
+            animation: navFallToBottom 0.4s ease-in;
+            animation-fill-mode: both;
+            
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) { animation-delay: ($i * 0.1s) + 0.4s; }
+            }
+        }
+        
+    }
+    
+    .site-main {
+        opacity: 0;
+        animation: mainFallToTop 0.6s ease-in;
+        animation-fill-mode: both;
+        animation-delay: 0.9s;
+        
+        .entry-content p {
+            opacity: 0;
+            animation: entryParFallToBottom 0.6s ease-in;
+            animation-fill-mode: both;
+            animation-delay: 0.9s;
+        }
+    }
+}
+
+.working-team {
+    .page-title {
+        opacity: 0;
+        animation: headingSlideInFromLeft 0.4s ease-in;
+        animation-fill-mode: both;
+    }
+
+    .workers li {
+        opacity: 0;
+        animation: fallSlideIn 0.4s ease-in;
+        animation-fill-mode: both;
+        
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) { animation-delay: ($i * 0.2s) + 0.3s; }
+        }
+    }
+}
+
+.contacts {
+    .page-title {
+        opacity: 0;
+        animation: headingSlideInFromLeft 0.4s ease-in;
+        animation-fill-mode: both;
+    }
+
+    &-main {
+        opacity: 0;
+        animation: fallSlideIn 0.5s ease-in;
+        animation-fill-mode: both;
+        animation-delay: 0.6s;
+    }
+}
