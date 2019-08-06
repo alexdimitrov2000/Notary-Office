@@ -272,13 +272,46 @@
         .address::before { content: '\f3c5'; }
         .phone-number::before { content: '\f879'; }
         .email-address::before { content: '\f0e0'; }
+
+        .work-time {
+            flex: 1 0 100%;
+            padding: 1.5em 1em;
+            border-top: 1px solid var(--color-border-default);
+
+            h5 {
+                text-align: center;
+                margin-bottom: 0.5em;
+                color: var(--color-contacts-info-headers);
+            }
+
+            ul {
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-gap: 1em;
+                justify-items: center;
+            }
+
+            li {
+                grid-column: span 3;
+            }
+        }
+    }
+
+    @include bp ( tablet ) {
+        .work-time li {
+            text-align: center;
+
+            .day {
+                display: block;
+            }
+        }
     }
 
     @include bp( small-desktop ) {
         &-main {
             display: flex;
             align-items: center;
-            min-height: 508px;
         }
 
         &-card {
@@ -290,14 +323,22 @@
             height: unset;
         }
 
-        .contacts-info {
+        &-info {
             flex: 1 0 45%;
+        }
+
+        .work-time li {
+            grid-column: span 2;
         }
     }
 
     @include bp( laptop ) {
-        &-main {
-            min-height: 454px;
+        .work-time ul {
+            grid-template-columns: repeat(7, 1fr);
+
+            li {
+                grid-column: span 1;
+            }
         }
     }
 }

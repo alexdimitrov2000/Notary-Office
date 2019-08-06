@@ -325,23 +325,48 @@ h2 {
     content: '\f879'; }
   .contacts-card .email-address::before {
     content: '\f0e0'; }
+  .contacts-card .work-time {
+    flex: 1 0 100%;
+    padding: 1.5em 1em;
+    border-top: 1px solid var(--color-border-default); }
+    .contacts-card .work-time h5 {
+      text-align: center;
+      margin-bottom: 0.5em;
+      color: var(--color-contacts-info-headers); }
+    .contacts-card .work-time ul {
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 1em;
+      justify-items: center; }
+    .contacts-card .work-time li {
+      grid-column: span 3; }
+
+@media (min-width: 720px) {
+  .contacts .work-time li {
+    text-align: center; }
+    .contacts .work-time li .day {
+      display: block; } }
 
 @media (min-width: 925px) {
   .contacts-main {
     display: flex;
-    align-items: center;
-    min-height: 508px; }
+    align-items: center; }
   .contacts-card {
     flex-grow: 1; }
   .contacts .map {
     flex: 0 0 50%;
     height: unset; }
   .contacts .contacts-info {
-    flex: 1 0 45%; } }
+    flex: 1 0 45%; }
+  .contacts .work-time li {
+    grid-column: span 2; } }
 
 @media (min-width: 1600px) {
-  .contacts-main {
-    min-height: 454px; } }
+  .contacts .work-time ul {
+    grid-template-columns: repeat(7, 1fr); }
+    .contacts .work-time ul li {
+      grid-column: span 1; } }
 
 .site-footer {
   background-color: var(--color-footer-bgrd-default);
