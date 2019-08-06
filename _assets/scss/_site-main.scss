@@ -259,10 +259,19 @@
         li {
             list-style: none outside;
 
-            i {
-                width: 1.2em;
+            &::before {
+                display: inline-block;
+                font-weight: 900;
+                width: 1em;
+                text-align: center;
+                margin-right: 0.4em;
+                font-family: 'Font Awesome 5 Free';
             }
         }
+
+        .address::before { content: '\f3c5'; }
+        .phone-number::before { content: '\f879'; }
+        .email-address::before { content: '\f0e0'; }
     }
 
     @include bp( small-desktop ) {

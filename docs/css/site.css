@@ -312,8 +312,19 @@ h2 {
     padding-left: 0; }
   .contacts-card li {
     list-style: none outside; }
-    .contacts-card li i {
-      width: 1.2em; }
+    .contacts-card li::before {
+      display: inline-block;
+      font-weight: 900;
+      width: 1em;
+      text-align: center;
+      margin-right: 0.4em;
+      font-family: 'Font Awesome 5 Free'; }
+  .contacts-card .address::before {
+    content: '\f3c5'; }
+  .contacts-card .phone-number::before {
+    content: '\f879'; }
+  .contacts-card .email-address::before {
+    content: '\f0e0'; }
 
 @media (min-width: 925px) {
   .contacts-main {
