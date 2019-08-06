@@ -345,7 +345,8 @@ h2 {
 @media (min-width: 720px) {
   .contacts .work-time li {
     text-align: center; }
-    .contacts .work-time li .day {
+    .contacts .work-time li .day,
+    .contacts .work-time li .time {
       display: block; } }
 
 @media (min-width: 925px) {
@@ -354,11 +355,11 @@ h2 {
     align-items: center; }
   .contacts-card {
     flex-grow: 1; }
-  .contacts .map {
-    flex: 0 0 50%;
-    height: unset; }
-  .contacts .contacts-info {
-    flex: 1 0 45%; }
+    .contacts-card .map {
+      flex: 0 0 50%;
+      height: unset; }
+    .contacts-card .contacts-info {
+      flex: 1 0 45%; }
   .contacts .work-time li {
     grid-column: span 2; } }
 
@@ -507,6 +508,22 @@ h2 {
   from {
     opacity: 0;
     transform: translateX(-17em); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@-webkit-keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(7em); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(7em); }
   to {
     opacity: 1;
     transform: translateX(0); } }
@@ -660,3 +677,11 @@ h2 {
           animation-fill-mode: both;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s; }
+  .contacts-main .work-time {
+    opacity: 0;
+    -webkit-animation: slideInFromRight 0.4s ease-in;
+            animation: slideInFromRight 0.4s ease-in;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s; }

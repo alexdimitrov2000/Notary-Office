@@ -302,7 +302,8 @@
         .work-time li {
             text-align: center;
 
-            .day {
+            .day,
+            .time {
                 display: block;
             }
         }
@@ -316,15 +317,15 @@
 
         &-card {
             flex-grow: 1;
-        }
-
-        .map {
-            flex: 0 0 50%;
-            height: unset;
-        }
-
-        &-info {
-            flex: 1 0 45%;
+    
+            .map {
+                flex: 0 0 50%;
+                height: unset;
+            }
+    
+            .contacts-info {
+                flex: 1 0 45%;
+            }
         }
 
         .work-time li {
