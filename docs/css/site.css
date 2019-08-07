@@ -361,7 +361,10 @@ h2 {
     .contacts-card .contacts-info {
       flex: 1 0 45%; }
   .contacts .work-time li {
-    grid-column: span 2; } }
+    grid-column: span 2; }
+    .contacts .work-time li:hover {
+      transform: scale(1.2);
+      cursor: pointer; } }
 
 @media (min-width: 1600px) {
   .contacts .work-time ul {
@@ -476,6 +479,9 @@ h2 {
 
 .workers .media > a strong {
   transition: opacity 0.3s ease-in; }
+
+.contacts .work-time li {
+  transition: transform 0.2s ease-in; }
 
 .site-footer .social-links a {
   transition: color 0.2s ease-in; }
