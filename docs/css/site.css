@@ -764,3 +764,18 @@ h2 {
   .services-list li:nth-child(5) {
     -webkit-animation-delay: 1.3s;
             animation-delay: 1.3s; }
+  .services-list li:nth-child(6) {
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s; }
+  .services-list li:nth-child(7) {
+    -webkit-animation-delay: 1.7s;
+            animation-delay: 1.7s; }
+  .services-list li:nth-child(8) {
+    -webkit-animation-delay: 1.9s;
+            animation-delay: 1.9s; }
+  .services-list li:nth-child(9) {
+    -webkit-animation-delay: 2.1s;
+            animation-delay: 2.1s; }
+  .services-list li:nth-child(10) {
+    -webkit-animation-delay: 2.3s;
+            animation-delay: 2.3s; }
