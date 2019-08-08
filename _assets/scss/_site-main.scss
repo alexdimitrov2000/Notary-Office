@@ -1,3 +1,5 @@
+$border-radius-value: 0.3em;
+
 .entry-content {
     background: linear-gradient(to bottom, rgba(173, 216, 230, 0.1), rgba(173, 216, 230, 0.7)), url('../images/notary-sign.jpg');
     background-position: center center;
@@ -114,7 +116,7 @@
             list-style: none outside;
             background-color: #FFF;
             grid-column-start: span 6;
-            border-radius: 0.3em;
+            border-radius: $border-radius-value;
             box-shadow: 0 0 0.7em 0 rgba(0,0,0,0.5);
 
             .media {
@@ -230,7 +232,7 @@
         display: flex;
         flex-wrap: wrap;
         margin: 1em 0;
-        border-radius: 0.3em;
+        border-radius: $border-radius-value;
         overflow: hidden;
         background-color: #FFF;
         box-shadow: 0 0 0.3em 0.1em rgba(0,0,0,0.5);
@@ -347,4 +349,70 @@
             }
         }
     }
+}
+
+.services {
+    ul {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1.5em;
+        padding-left: 0;
+
+        li {
+            display: block;
+            list-style: none outside;
+            grid-column: span 6;
+            background-color: #FFF;
+            padding: 1em;
+            border-radius: $border-radius-value;
+            box-shadow: 0 0 0.7em 0 rgba(0,0,0,0.5);
+            position: relative;
+            
+            &::before,
+            &::after {
+                display: block;
+                content: '';
+                background: url(/images/paperpin.jpg) left;
+                background-size: cover;
+                width: 2em;
+                height: 1.5em;
+                position: absolute;
+            }
+
+            &::before {
+                top: 0.4em;
+                left: 0.7em;
+            }
+
+            &::after {
+                top: 0.4em;
+                right: 0;
+            }
+            
+            strong {
+                display: block;
+                font-style: italic;
+                font-size: 1.4em;
+                padding: 0.7em 0 0.5em 0;
+                border-bottom: 2px solid var(--color-border-default);
+            }
+            
+            span {
+                display: block;
+                padding: 0.5em 0;
+            }
+        }
+
+        @include bp ( tablet ) {
+            li {
+                grid-column: span 3;
+            }
+        }
+
+        @include bp( small-desktop ) {
+            li {
+                grid-column: span 2;
+            }
+        }
+    }   
 }

@@ -372,6 +372,50 @@ h2 {
     .contacts .work-time ul li {
       grid-column: span 1; } }
 
+.services ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1.5em;
+  padding-left: 0; }
+  .services ul li {
+    display: block;
+    list-style: none outside;
+    grid-column: span 6;
+    background-color: #FFF;
+    padding: 1em;
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.7em 0 rgba(0, 0, 0, 0.5);
+    position: relative; }
+    .services ul li::before, .services ul li::after {
+      display: block;
+      content: '';
+      background: url(/images/paperpin.jpg) left;
+      background-size: cover;
+      width: 2em;
+      height: 1.5em;
+      position: absolute; }
+    .services ul li::before {
+      top: 0.4em;
+      left: 0.7em; }
+    .services ul li::after {
+      top: 0.4em;
+      right: 0; }
+    .services ul li strong {
+      display: block;
+      font-style: italic;
+      font-size: 1.4em;
+      padding: 0.7em 0 0.5em 0;
+      border-bottom: 2px solid var(--color-border-default); }
+    .services ul li span {
+      display: block;
+      padding: 0.5em 0; }
+  @media (min-width: 720px) {
+    .services ul li {
+      grid-column: span 3; } }
+  @media (min-width: 925px) {
+    .services ul li {
+      grid-column: span 2; } }
+
 .site-footer {
   background-color: var(--color-footer-bgrd-default);
   color: #FFF; }
