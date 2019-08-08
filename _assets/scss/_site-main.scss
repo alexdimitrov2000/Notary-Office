@@ -352,11 +352,11 @@ $border-radius-value: 0.3em;
 }
 
 .services {
-    ul {
+    &-list {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-gap: 1.5em;
-        padding-left: 0;
+        padding: 1em 0;
 
         li {
             display: block;

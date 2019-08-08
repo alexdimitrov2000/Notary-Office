@@ -157,3 +157,21 @@
         }
     }
 }
+
+.services {
+    .page-title {
+        opacity: 0;
+        animation: headingSlideInFromLeft 0.4s ease-in;
+        animation-fill-mode: both;
+    }
+
+    &-list li {
+        opacity: 0;
+        animation: fallSlideIn 0.4s ease-in;
+        animation-fill-mode: both;
+        
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) { animation-delay: ($i * 0.2s) + 0.3s; }
+        }
+    }
+}
