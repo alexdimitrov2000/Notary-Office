@@ -7,12 +7,14 @@
 }
 
 .workers .media > a {
+    $hoverEffectTransitionTime: 0.3s;
+
     &::before {
-        transition: background 0.3s ease-in;
+        transition: background $hoverEffectTransitionTime ease-in;
     }
 
     strong {
-        transition: opacity 0.3s ease-in;
+        transition: opacity $hoverEffectTransitionTime ease-in;
     }
 }
 
