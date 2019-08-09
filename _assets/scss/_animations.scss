@@ -167,7 +167,7 @@
 
     &-list li {
         opacity: 0;
-        animation: fallSlideIn 0.4s ease-in;
+        animation: slideInFromRight 0.4s ease-in;
         animation-fill-mode: both;
         
         @for $i from 1 through 10 {
