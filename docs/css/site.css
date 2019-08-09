@@ -378,6 +378,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 1.5em;
+  grid-auto-flow: dense;
   padding: 1em 0; }
   .services-list li {
     display: block;
@@ -386,7 +387,7 @@ h2 {
     background-color: #FFF;
     padding: 1em 2.2em;
     border-radius: 0.3em;
-    box-shadow: 0 0 0.7em 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.3em 0.7em 0 rgba(0, 0, 0, 0.5);
     position: relative; }
     .services-list li::before, .services-list li::after {
       display: block;
@@ -416,7 +417,9 @@ h2 {
       grid-column: span 3; } }
   @media (min-width: 925px) {
     .services-list li {
-      grid-column: span 2; } }
+      grid-column: span 2; }
+      .services-list li.long {
+        grid-column: span 3; } }
 
 .site-footer {
   background-color: var(--color-footer-bgrd-default);
@@ -747,8 +750,8 @@ h2 {
 
 .services-list li {
   opacity: 0;
-  -webkit-animation: fallSlideIn 0.4s ease-in;
-          animation: fallSlideIn 0.4s ease-in;
+  -webkit-animation: slideInFromRight 0.4s ease-in;
+          animation: slideInFromRight 0.4s ease-in;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
   .services-list li:nth-child(1) {
