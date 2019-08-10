@@ -481,6 +481,10 @@ $font-family-fontawesome-free: 'Font Awesome 5 Free';
         @include bp ( tablet ) {
             li {
                 grid-column: span 3;
+
+                &:hover {
+                    box-shadow: 0 0.3em 0.9em 0 rgba(0,0,0,0.9);
+                }
             }
         }
 

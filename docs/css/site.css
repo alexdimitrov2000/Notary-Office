@@ -460,7 +460,9 @@ h2 {
       padding: 0.5em 0; }
   @media (min-width: 720px) {
     .services-list li {
-      grid-column: span 3; } }
+      grid-column: span 3; }
+      .services-list li:hover {
+        box-shadow: 0 0.3em 0.9em 0 rgba(0, 0, 0, 0.9); } }
   @media (min-width: 925px) {
     .services-list li {
       grid-column: span 2; }
@@ -580,6 +582,9 @@ h2 {
 
 .contacts .work-time li {
   transition: transform 0.2s ease-in; }
+
+.services .services-list li {
+  transition: box-shadow 0.2s ease-in; }
 
 .site-footer .social-links a {
   transition: color 0.2s ease-in; }
