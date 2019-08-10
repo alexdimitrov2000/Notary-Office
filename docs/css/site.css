@@ -291,7 +291,7 @@ h2 {
     .working-team .workers li .toggle-button {
       display: flex;
       align-items: center;
-      color: var(--color-toggle-button-hover); }
+      color: var(--color-toggle-button); }
       .working-team .workers li .toggle-button .show,
       .working-team .workers li .toggle-button .hide {
         margin-right: 0.5em; }
