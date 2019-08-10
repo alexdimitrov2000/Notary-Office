@@ -6,15 +6,23 @@
     transition: width 0.3s ease-in;
 }
 
-.workers .media > a {
-    $hoverEffectTransitionTime: 0.3s;
+.workers {
+    .media > a {
+        $hoverEffectTransitionTime: 0.3s;
 
-    &::before {
-        transition: background $hoverEffectTransitionTime ease-in;
+        &::before {
+            transition: background $hoverEffectTransitionTime ease-in;
+        }
+
+        strong {
+            transition: opacity $hoverEffectTransitionTime ease-in;
+        }
     }
 
-    strong {
-        transition: opacity $hoverEffectTransitionTime ease-in;
+    .member-info {
+        .toggle-button::after {
+            transition: transform 0.2s ease-in;
+        }
     }
 }
 

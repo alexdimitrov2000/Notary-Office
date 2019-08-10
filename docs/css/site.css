@@ -11,6 +11,7 @@
   --color-border-default: rgb(173, 216, 230);
   --color-nav-link-bgrd: rgb(173, 216, 230);
   --color-nav-link-bgrd-hover: rgb(78, 211, 255);
+  --color-toggle-button: rgb(78, 211, 255);
   --color-contacts-info-headers: rgb(78, 211, 255);
   --color-footer-bgrd-default: #565656;
   --color-footer-headers: rgb(78, 211, 255);
@@ -212,13 +213,15 @@ h2 {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 1.5em; }
+  grid-gap: 1.5em;
+  align-items: start; }
   .working-team .workers li {
     list-style: none outside;
     background-color: #FFF;
     grid-column-start: span 6;
     border-radius: 0.3em;
-    box-shadow: 0 0 0.7em 0 rgba(0, 0, 0, 0.5); }
+    box-shadow: 0 0 0.7em 0 rgba(0, 0, 0, 0.5);
+    position: relative; }
     .working-team .workers li .media {
       display: block;
       overflow: hidden;
@@ -248,7 +251,7 @@ h2 {
           left: 0;
           border-top-left-radius: 0.3em;
           border-top-right-radius: 0.3em; }
-        .working-team .workers li .media > a strong {
+        .working-team .workers li .media > a .member-desc {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -264,7 +267,7 @@ h2 {
           .working-team .workers li .media > a:active::before, .working-team .workers li .media > a:hover::before {
             background: rgba(0, 0, 0, 0.8);
             z-index: 2; }
-          .working-team .workers li .media > a:active strong, .working-team .workers li .media > a:hover strong {
+          .working-team .workers li .media > a:active .member-desc, .working-team .workers li .media > a:hover .member-desc {
             opacity: 1;
             z-index: 3; }
       .working-team .workers li .media img {
@@ -274,12 +277,52 @@ h2 {
         border-top-right-radius: 0.3em; }
     .working-team .workers li .member-data {
       display: block;
-      padding: 2em 1.5em; }
+      padding: 0.5em 1.2em;
+      padding-bottom: 2em; }
     .working-team .workers li .member-name {
       display: block;
       font-size: 1.4em; }
     .working-team .workers li .member-position {
       padding-bottom: 0; }
+    .working-team .workers li .toggle-button-container {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5em 0.8em 0.3em 0; }
+    .working-team .workers li .toggle-button {
+      display: flex;
+      align-items: center;
+      color: var(--color-toggle-button-hover); }
+      .working-team .workers li .toggle-button .show,
+      .working-team .workers li .toggle-button .hide {
+        margin-right: 0.5em; }
+      .working-team .workers li .toggle-button .show {
+        display: none; }
+      .working-team .workers li .toggle-button::after {
+        display: block;
+        content: '\f139';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 1.2em; }
+      .working-team .workers li .toggle-button:hover {
+        cursor: pointer; }
+    .working-team .workers li .toggle-member-data {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      .working-team .workers li .toggle-member-data + .member-info .toggle-button::after {
+        transform: rotate(0); }
+      .working-team .workers li .toggle-member-data + .member-info .member-data {
+        display: block; }
+      .working-team .workers li .toggle-member-data:checked + .member-info .toggle-button::after {
+        transform: rotate(180deg); }
+      .working-team .workers li .toggle-member-data:checked + .member-info .toggle-button .hide {
+        display: none; }
+      .working-team .workers li .toggle-member-data:checked + .member-info .toggle-button .show {
+        display: block; }
+      .working-team .workers li .toggle-member-data:checked + .member-info .member-data {
+        display: none; }
     @media (min-width: 650px) {
       .working-team .workers li.notary {
         grid-column: span 3; }
@@ -287,6 +330,9 @@ h2 {
         grid-column: span 2; }
         .working-team .workers li.deputy .member-name, .working-team .workers li.assistant .member-name {
           font-size: 1.2em; } }
+    @media (min-width: 925px) {
+      .working-team .workers li .toggle-button:hover {
+        font-weight: 900; } }
 
 .contacts .wrapper {
   padding: 2em; }
@@ -320,7 +366,7 @@ h2 {
       width: 1em;
       text-align: center;
       margin-right: 0.4em;
-      font-family: 'Font Awesome 5 Free'; }
+      font-family: "Font Awesome 5 Free"; }
   .contacts-card .address::before {
     content: '\f3c5'; }
   .contacts-card .phone-number::before {
@@ -528,6 +574,9 @@ h2 {
 
 .workers .media > a strong {
   transition: opacity 0.3s ease-in; }
+
+.workers .member-info .toggle-button::after {
+  transition: transform 0.2s ease-in; }
 
 .contacts .work-time li {
   transition: transform 0.2s ease-in; }

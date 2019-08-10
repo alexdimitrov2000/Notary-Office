@@ -22,12 +22,21 @@ icon: fa-users
                             <span class="member-image">
                                 <img src="{{ worker.image_src }}" alt="{{ worker.name }}">
                             </span>
-                            <strong class="member-info">{{ worker.description }}</strong>
+                            <strong class="member-desc">{{ worker.description }}</strong>
                         </a>
                     </span>
-                    <span class="member-data">
-                        <strong class="member-name">{{ worker.name }}</strong>
-                        <span class="member-position">{{ worker.position }}</span>
+                    <input type="checkbox" id="toggle-member-data-{{ forloop.index }}" class="toggle-member-data">
+                    <span class="member-info">
+                        <span class="toggle-button-container">
+                            <label for="toggle-member-data-{{ forloop.index }}" class="toggle-button">
+                                <span class="show">Покажи повече</span>
+                                <span class="hide">Скрий</span>
+                            </label>
+                        </span>
+                        <span class="member-data">
+                            <strong class="member-name">{{ worker.name }}</strong>
+                            <span class="member-position">{{ worker.position }}</span>
+                        </span>
                     </span>
                 </li>
 
